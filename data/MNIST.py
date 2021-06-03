@@ -95,7 +95,7 @@ def loadData(src, cimg):
         gzfname, h = urlretrieve(src, './delete.me')
         print('Done.')
     else:
-        gzfname = "../data/MNIST/{}".format(src)
+        gzfname = "data/MNIST/{}".format(src)
 
     try:
         with gzip.open(gzfname) as gz:
@@ -126,7 +126,7 @@ def loadLabels(src, cimg):
         gzfname, h = urlretrieve(src, './delete.me')
         print('Done.')
     else:
-        gzfname = "../data/MNIST/{}".format(src)
+        gzfname = "data/MNIST/{}".format(src)
     try:
         with gzip.open(gzfname) as gz:
             n = struct.unpack('I', gz.read(4))
@@ -149,4 +149,3 @@ def try_download(dataSrc, labelsSrc, cimg):
     data = loadData(dataSrc, cimg)
     labels = loadLabels(labelsSrc, cimg)
     return np.hstack((data, labels))
-

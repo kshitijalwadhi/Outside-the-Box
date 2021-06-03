@@ -15,7 +15,7 @@ DOWNLOAD = False
 
 
 def load_F_MNIST(data_train_model: DataSpec, data_test_model: DataSpec, data_train_monitor: DataSpec,
-               data_test_monitor: DataSpec, data_run: DataSpec):
+                 data_test_monitor: DataSpec, data_run: DataSpec):
     # raise(NotImplementedError("This method was abandoned. Please fix it first before using it."))
 
     # URLs for the train image and label data
@@ -89,7 +89,7 @@ def load_F_MNIST(data_train_model: DataSpec, data_test_model: DataSpec, data_tra
 
 
 def loadData(src, cimg):
-    gzfname = "../data/Fashion_MNIST/{}".format(src)
+    gzfname = "data/Fashion_MNIST/{}".format(src)
 
     try:
         with gzip.open(gzfname) as gz:
@@ -114,7 +114,7 @@ def loadData(src, cimg):
 
 
 def loadLabels(src, cimg):
-    gzfname = "../data/Fashion_MNIST/{}".format(src)
+    gzfname = "data/Fashion_MNIST/{}".format(src)
     try:
         with gzip.open(gzfname) as gz:
             n = struct.unpack('I', gz.read(4))
@@ -137,4 +137,3 @@ def try_download(dataSrc, labelsSrc, cimg):
     data = loadData(dataSrc, cimg)
     labels = loadLabels(labelsSrc, cimg)
     return np.hstack((data, labels))
-

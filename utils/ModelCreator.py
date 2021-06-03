@@ -10,7 +10,7 @@ def get_model(model_name: str, data_train: DataSpec, data_test: DataSpec, n_clas
               batch_size, statistics: Statistics, model_path):
     model_path, model_constructor = get_model_loader(model_name, model_path)
 
-    model_path = "../" + model_path  # go up one folder because run scripts are started from the folder "run/"
+    model_path = model_path  # go up one folder because run scripts are started from the folder "run/"
     loaded = False
     if isfile(model_path):
         try:

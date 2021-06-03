@@ -12,7 +12,7 @@ def load_CIFAR_10(data_train_model: DataSpec, data_test_model: DataSpec, data_tr
                   data_test_monitor: DataSpec, data_run: DataSpec):
     # raise(NotImplementedError("This method was abandoned. Please fix it first before using it."))
 
-    cifar10_dataset_folder_path = "../data/cifar-10-python/cifar-10-batches-py"
+    cifar10_dataset_folder_path = "data/cifar-10-python/cifar-10-batches-py"
     # preprocess_and_save_data(cifar10_dataset_folder_path, normalize, one_hot_encode)
     n_batches = 5
     x_train = []
