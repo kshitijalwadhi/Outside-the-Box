@@ -11,10 +11,10 @@ def run_experiment_novelty_variation():
     instances = [
         # entries: instance constructor, box_abstraction, flag for using Boolean abstraction, epsilon,
         # clustering threshold, class count
-        (instance_MNIST, box_abstraction_MNIST, True, 0.0, 0.07, -1),
-        (instance_F_MNIST, box_abstraction_F_MNIST, True, 0.0, 0.07, -1),
-        (instance_CIFAR10, box_abstraction_CIFAR10, False, 0.0, 0.07, -1),
-        (instance_GTSRB, box_abstraction_GTSRB, False, 0.1, 0.3, 20)
+        (instance_MNIST, box_abstraction_MNIST, True, 0.0, 0.07, -1)
+        # (instance_F_MNIST, box_abstraction_F_MNIST, True, 0.0, 0.07, -1),
+        # (instance_CIFAR10, box_abstraction_CIFAR10, False, 0.0, 0.07, -1),
+        # (instance_GTSRB, box_abstraction_GTSRB, False, 0.1, 0.3, 20)
     ]
 
     for instance_function, box_abstraction, use_boolean_abstraction, epsilon, clustering_threshold, n_classes_max in \
